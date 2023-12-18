@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+About Us
+{% endblock title %}
+{% block head %}
+<h1>About Our Gym</h1>
+
+<h2>Our Locations</h2>
+<ul>
+    {% for location in locations %}
+    <li>{{ location.name }} - {{ location.address }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Our Instructors</h2>
+<ul>
+    {% for instructor in instructors %}
+    <li>{{ instructor.name }} - {{ instructor.bio }}</li>
+    {% endfor %}
+</ul>
+{% endblock head%}
